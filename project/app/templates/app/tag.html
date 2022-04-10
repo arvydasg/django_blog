@@ -3,10 +3,7 @@
 {% block content %}
     <h1>{{tag.name}}</h1>
     <hr/>
-    {% for tag in tags.posts.all %}
-    {% for post in posts %}
-            <p>{{post.title}}</p>
-            <p>{{tag.name}}</p>
-        {% endfor %}
+    {% for x in postauskai %}
+        <p>{{x.created|date:'Y-m-d'}} - <a href="{% url 'blog_post' x.id %}">{{x.title}}</a></p>
     {% endfor %}
 {% endblock content %}

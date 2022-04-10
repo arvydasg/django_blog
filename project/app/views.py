@@ -56,6 +56,8 @@ def tags(request):
 
 def tag(request, pk):
     tag = Tag.objects.get(id=pk)
+    postauskai = tag.blog_post_set.all()
 
-    context = {'tag': tag}
+    # postauskai = Blog_post.objects.filter(tags__name='emacs')
+    context = {'tag': tag, 'postauskai': postauskai}
     return render(request, 'app/tag.html', context)
