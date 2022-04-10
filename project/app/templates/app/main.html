@@ -1,0 +1,32 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UT-8"/>
+        <title>Arvydas.dev</title>
+        <!-- basic stylesheet -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <!-- end basic stylesheet -->
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" cross origin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Recursive&display=swap" rel="stylesheet">
+        <!-- end font -->
+        <!-- code block styling -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/app/zenburn.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <!-- end code block styling -->
+    </head>
+    <body>
+      <header>{% include 'app/navbar.html' %}</header>
+        <section>
+            <article>
+                {% block content %}
+                    <!-- Content goes in here -->
+                {% endblock content %}
+            </article>
+        </section>
+    </body>
+</html>

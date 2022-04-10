@@ -1,0 +1,15 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1>Arvydas Gasparavicius</h1>
+    <hr/>
+    <p>
+        My name is Arvydas Gasparavicius. I am self taught programmer/web-dev. Every day I spend time with computers (I have a few). I write some code, develop my current projects, tweak my emacs configuration, monitor scripts that I have created for businesses that elevate them from repetitive tasks and so on.
+        <br/>
+        <br/>
+        If you’re interested in Python, Django, Linux or Emacs, then you might find my posts useful or interesting. Most of the stuff I write is on GitHub, where my username is <a href="https://github.com/arvydasg" target="_blank">arvydasg</a>. You can also reach me by email at <a href="mailto:info@arvydas.dev.">info@arvydas.dev</a>
+    </p>
+    <p>My <a href="{% static 'images/arvydas_cv.pdf' %}" target="_blank">CV</a> (in Lithuanian).</p>
+{% endblock content %}

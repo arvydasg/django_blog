@@ -1,0 +1,12 @@
+{% extends 'app/main.html' %}
+
+{% block content %}
+    <h1>{{tag.name}}</h1>
+    <hr/>
+    {% for tag in tags.posts.all %}
+    {% for post in posts %}
+            <p>{{post.title}}</p>
+            <p>{{tag.name}}</p>
+        {% endfor %}
+    {% endfor %}
+{% endblock content %}

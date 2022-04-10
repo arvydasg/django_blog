@@ -1,0 +1,11 @@
+{% extends 'app/main.html' %}
+
+{% block content %}
+    <h1>Projects</h1>
+    <hr/>
+    {% for project in projects %}
+        <p><a href="{% url 'project' project.id %}">{{project.title}}</a> - <span>{{project.sub_title}}</span></p>
+    {% empty %}
+        <h3>no projects found...</h3>
+    {% endfor  %}
+{% endblock content %}

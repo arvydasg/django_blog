@@ -1,0 +1,11 @@
+{% extends 'app/main.html' %}
+
+{% block content %}
+    <h1>{{project.title}}</h1>
+    <img alt="" src="{{project.thumbnail.url}}" width="100%" />
+    <hr/>
+    <!-- <h5>{{project.sub_title}}</h5> -->
+<p>{{project.content|safe}}</p>
+<br/>
+<a href="/projects">Back to projects</a>
+{% endblock content %}
