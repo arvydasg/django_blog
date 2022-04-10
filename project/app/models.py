@@ -40,7 +40,7 @@ class Projects(models.Model):
     content = RichTextField(null=True, blank=True)
     # content = models.TextField(null=True, blank=True)
     active = models.BooleanField(default=False)
-    thumbnail = models.ImageField(null=True, blank=True, upload_to='images', default='images/placeholder.png')
+    thumbnail = models.ImageField(null=True, blank=True, upload_to='images', default='static/images/placeholder.png')
 
     class Meta:
         ordering = ['title']
